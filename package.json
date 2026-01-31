@@ -1,0 +1,84 @@
+{
+  "name": "tibet-audit",
+  "version": "0.2.3",
+  "description": "Compliance Health Scanner - Like Lynis, but for regulations. GDPR, AI Act, PIPA, and 10+ frameworks in one scan.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "tibet-audit": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "compliance",
+    "gdpr",
+    "ai-act",
+    "pipa",
+    "appi",
+    "pdpa",
+    "lgpd",
+    "privacy",
+    "audit",
+    "security",
+    "tibet",
+    "lynis",
+    "diaper-protocol",
+    "sovereign",
+    "cross-border",
+    "checkpoint",
+    "regulations",
+    "eu",
+    "korea",
+    "japan",
+    "singapore",
+    "brazil"
+  ],
+  "author": {
+    "name": "Jasper van de Meent",
+    "email": "jasper@humotica.com",
+    "url": "https://humotica.com"
+  },
+  "contributors": [
+    {
+      "name": "Root AI (Claude)",
+      "url": "https://anthropic.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspertvdm/tibet-audit-js.git"
+  },
+  "homepage": "https://humotica.com",
+  "bugs": {
+    "url": "https://github.com/jaspertvdm/tibet-audit-js/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
