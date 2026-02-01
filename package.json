@@ -1,7 +1,7 @@
 {
   "name": "tibet-audit",
-  "version": "0.3.0",
-  "description": "Compliance Health Scanner - Like Lynis, but for regulations. GDPR, AI Act, NIS2, BIO2 (Dutch Gov), and 10+ frameworks in one scan.",
+  "version": "0.4.0",
+  "description": "Compliance Health Scanner - Like Lynis, but for regulations. GDPR, AI Act, DORA (Financial), NIS2, BIO2 (Dutch Gov), and 10+ frameworks in one scan.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -32,6 +32,8 @@
     "compliance",
     "gdpr",
     "ai-act",
+    "dora",
+    "financial-resilience",
     "nis2",
     "bio2",
     "dutch-government",

@@ -5,7 +5,29 @@
 [![npm version](https://badge.fury.io/js/tibet-audit.svg)](https://www.npmjs.com/package/tibet-audit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Scan your projects for **GDPR**, **AI Act**, **PIPA**, **APPI**, **PDPA**, **LGPD**, **JIS** compliance in seconds.
+Scan your projects for **GDPR**, **AI Act**, **DORA**, **BIO2**, **NIS2**, **PIPA**, **APPI**, **PDPA**, **LGPD**, **JIS** compliance in seconds.
+
+### 🏦 NEW: DORA Framework (Financial Sector)
+
+**Digital Operational Resilience Act** - EU regulation for financial entities.
+
+```bash
+$ tibet-audit scan --framework dora --org "ING Bank"
+
+🏦 DORA COMPLIANCE MODE
+   Pillars: 5 | BIO2 overlap: ~60%
+   TIBET = Pillar 5 compliance (Information Sharing)
+
+╔════════════════════════════════════════════════════════════╗
+║  Overall Grade: B 🟢                                       ║
+║  Score: 14/17 checks passed (82.4%)                        ║
+╚════════════════════════════════════════════════════════════╝
+
+PILLAR 1: ICT Risk Management (6/6 = 100%) ✅
+PILLAR 5: Information Sharing (1/1 = 100%) ✅ TIBET detected!
+```
+
+**Key insight:** TIBET provides automatic Pillar 5 compliance!
 
 ```
 ══════════════════════════════════════════════════════════════════════════════
