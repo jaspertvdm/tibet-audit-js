@@ -85,6 +85,42 @@ await applyFixes(fixable);
 | **PDPA** | Singapore | Consent, DPO, 3-day breach notification |
 | **LGPD** | Brazil | Legal basis, Encarregado, ARCO rights |
 | **JIS** | Universal | Bilateral consent, TIBET provenance, intent verification |
+| **BIO2** | Netherlands | Dutch government security baseline (17 automated checks) |
+| **NIS2** | EU | Network security directive (via BIO2 + ISO 27001) |
+
+## 🇳🇱 BIO2 Framework - Dutch Government Baseline
+
+**71 dagen tot NIS2 deadline (18 april 2026)**
+
+BIO2 = Baseline Informatiebeveiliging Overheid 2, de Nederlandse overheidsstandaard voor informatiebeveiliging. tibet-audit ondersteunt nu 17 geautomatiseerde BIO2 checks met Grade A-F scoring.
+
+```bash
+# BIO2 scan met organisatienaam
+tibet-audit scan --framework bio2 --org "Gemeente Amsterdam"
+```
+
+Output voorbeeld:
+```
+╔══════════════════════════════════════════════════════════════╗
+║                    BIO2 Compliance Report                    ║
+║                  Gemeente Amsterdam                          ║
+╠══════════════════════════════════════════════════════════════╣
+║  Overall Grade: A ✅                                         ║
+║  Score: 17/17 checks passed (100.0%)                        ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+### BIO2 → NIS2 Alignment
+
+> "BIO2 + ISO 27001 certificering = NIS2 zorgplicht invulling"
+> — CIP/MinBZK guidance
+
+| BIO2 Chapter | Domain | Automated Checks |
+|--------------|--------|------------------|
+| 5 | Organisatorisch | 5 checks |
+| 6 | Personeel | Planned |
+| 7 | Fysiek | Planned |
+| 8 | Technologisch | 12 checks |
 
 ## CLI Options
 
@@ -95,6 +131,8 @@ tibet-audit scan [path] [options]
 
 Options:
   --categories, -c  Categories to check (gdpr,ai_act,pipa,appi,pdpa,lgpd,jis)
+  --framework, -f   Framework: bio2, nis2, gdpr, ai_act, dora
+  --org             Organization name for compliance report
   --output, -o      Output format: terminal, json
   --quiet, -q       Minimal output
   --cry             Verbose mode - all the details
